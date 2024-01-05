@@ -2,6 +2,7 @@ import ProfileImage from "@/components/About/profile-img";
 import AchievementsBlock from "@/components/About/achievements-block";
 import QuoteBlock from "@/components/About/quote-block";
 import Head from "next/head";
+import AboutPicture from "@/components/shared/about-picture";
 
 function AboutPage() {
     return (
@@ -18,7 +19,7 @@ function AboutPage() {
                     data-aos="zoom-in-up"
                     data-aos-duration="800"
                 >
-                    <ProfileImage width={420} height={420}/>
+                    <AboutPicture width={420} height={420}/>
                 </div>
                 <div
                     className="flex justify-center items-center bg-white rounded shadow-md text-sm p-6 my-10 lg:my-24 lg:mb-72 lg:mx-10 md:mx-16"
