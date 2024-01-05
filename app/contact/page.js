@@ -16,14 +16,17 @@ function ContactPage() {
             </Head>
             <div className="md:flex justify-center items-center bg-[#F2F2F2] w-full h-screen">
                 <div className="flex justify-center items-center w-full h-screen">
-                    <ProfileImage width={550} height={550}/>
+                    <div className='mb-20'>
+                        <ProfileImage width={550} height={550}/>
+                    </div>
                 </div>
-                <div className="w-full p-4">
+                <div className="w-full p-4 mb-20">
                     <div className='mb-10 p-2'>
                         <h1 className="text-4xl my-4">Contact</h1>
                         <hr className="mb-4 "/>
                         <p className="my-6">
-                            Now, as you were able to get a picture of who I am, how I work and what I can do, it is up to
+                            Now, as you were able to get a picture of who I am, how I work and what I can do, it is up
+                            to
                             you to contact me and lay the foundation for a new and successful relationship.
                         </p>
                         <div>
