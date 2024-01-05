@@ -3,7 +3,7 @@ import React from "react";
 
 function ProfileImage({width,height}) {
     const imageSrc =
-        "https://firebasestorage.googleapis.com/v0/b/photography-site-ksahlos-84194.appspot.com/o/Others%2F91480670_2573088219631235_8832628316130246656_n-1-650x650.jpg?alt=media&token=afca5c9c-519d-4ce3-8fbf-f44a1ddc05a7";
+        "https://firebasestorage.googleapis.com/v0/b/photography-site-ksahlos-84194.appspot.com/o/Others%2Fksahlos-profile-img.jpg?alt=media&token=3808a140-06fe-4d4d-b4dc-32d8f084b61e";
 
     return (
         <Image src={imageSrc} alt="profile-pic" width={width} height={height} className="rounded shadow-md" loading="eager"/>
