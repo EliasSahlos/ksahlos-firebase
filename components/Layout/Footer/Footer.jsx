@@ -10,7 +10,7 @@ function getCurrentYear() {
 function Footer() {
     return (
         <div>
-            <div className="flex justify-center items-center bg-white h-[32px] font-light">
+            <div className="flex justify-center items-center bg-white h-[32px] 2xl:h-[64px] font-light">
                 <div className=" flex items-center absolute left-0">
                     <Link
                         className="hover:text-blue-500 hover:scale-125 ease-in duration-300 cursor-pointer"
