@@ -20,7 +20,7 @@ function ContactPage() {
                         <ProfileImage width={550} height={550}/>
                     </div>
                 </div>
-                <div className="w-full p-4 mb-20 2xl:mb-96 mr-16 2xl:mr-96">
+                <div className="w-full p-4 mb-20 2xl:mb-96 mr-11 2xl:mr-96">
                     <div className='mb-10 p-2'>
                         <h1 className="text-4xl my-4">Contact</h1>
                         <hr className="mb-4 "/>
