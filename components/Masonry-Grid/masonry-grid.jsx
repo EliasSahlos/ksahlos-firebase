@@ -40,7 +40,7 @@ function MasonryGrid({photos}) {
         if (windowWidth <= 500) {
             return 2; //Columns on Mobile View
         } else {
-            return 3; //Columns on Desktop View
+            return 4; //Columns on Desktop View
         }
     }
 
