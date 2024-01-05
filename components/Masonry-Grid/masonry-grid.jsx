@@ -53,8 +53,8 @@ function MasonryGrid({ photos }) {
                         className="block w-full rounded shadow-lg"
                         width={800}
                         height={800}
-                        priority
-                        loading="eager"
+                        loading="lazy"
+                        quality={80}
                     />
                     <div
                         className="text-[15px] absolute top-0 left-0 w-full h-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer rounded"
