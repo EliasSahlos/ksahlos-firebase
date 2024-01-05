@@ -16,7 +16,7 @@ function PricingBoxes() {
                     <li className="mb-4">-</li>
                     <li className="mb-4">-</li>
                     <li className="mb-4">Printed Using Pigment Inks</li>
-                    <li className="mb-4">(Only Local Art)</li>
+                    <li className="mb-4">(Shipped In Paper Tube)</li>
                 </ul>
             </div>
             <div className="bg-white md:w-[250px] shadow-md rounded p-2" data-aos="zoom-in-up" data-aos-duration="800"
@@ -72,11 +72,11 @@ function PricingBoxes() {
                 <ul className="text-sm text-center ">
                     <li className="mb-2 font-semibold">Fine Art Prints</li>
                     <hr className="mb-2"/>
-                    <li className="mb-4">(N/A)</li>
+                    <li className="mb-4">(Call For Price)</li>
                     <li className="text-white bg-orange-400 rounded md:mx-8 mb-4">Larger Sizes Available</li>
                     <li className="mb-4 ">HAHNEMUHLE Fine Art Museum Quality Paper</li>
                     <li className="mb-4">Signed By The Artist</li>
-                    <li className="mb-4">Limited To 10 Numbered Copies</li>
+                    <li className="mb-4">-</li>
                     <li className="mb-4">Certificate Of Authenticity</li>
                     <li className="mb-4">Hologram Verified</li>
                     <li className="mb-4">Printed Using Pigment Inks</li>
