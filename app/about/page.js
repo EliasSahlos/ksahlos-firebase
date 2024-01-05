@@ -21,7 +21,7 @@ function AboutPage() {
                     <ProfileImage width={420} height={420} />
                 </div>
                 <div
-                    className="flex justify-center items-center bg-white rounded shadow-md text-sm p-6 my-10 lg:my-24 lg:mb-72 lg:mx-10 md:mx-16"
+                    className="flex justify-center items-center bg-white rounded shadow-md text-sm p-4 my-10 lg:my-24 lg:mb-72 lg:mx-10 md:mx-16"
                     data-aos="zoom-in-up"
                     data-aos-delay="200"
                     data-aos-duration="800"
