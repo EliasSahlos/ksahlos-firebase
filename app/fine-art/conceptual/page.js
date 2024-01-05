@@ -5,7 +5,7 @@ import {useEffect, useState} from "react";
 import {getPhotos} from "@/firebase/get-photos";
 import Spinner from "@/components/Spinner/spinner";
 
-function MinimalisticGallery() {
+function ConceptualGallery() {
     const [photosData, setPhotosData] = useState([])
     const category = 'conceptual'
 
@@ -44,4 +44,4 @@ function MinimalisticGallery() {
     );
 }
 
-export default MinimalisticGallery;
+export default ConceptualGallery;

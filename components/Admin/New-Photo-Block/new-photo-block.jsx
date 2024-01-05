@@ -114,6 +114,7 @@ function NewPhotoBlock() {
                     Conceptual
                 </option>
                 <option value="Black-And-White">Black-And-White</option>
+                <option value="Stories">Stories</option>
                 <option value="Minimalistic">Minimalistic</option>
                 <option value="Local-Art">Local-Art</option>
             </select>

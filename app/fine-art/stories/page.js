@@ -5,9 +5,9 @@ import {useEffect, useState} from "react";
 import {getPhotos} from "@/firebase/get-photos";
 import Spinner from "@/components/Spinner/spinner";
 
-function BlackAndWhiteGallery() {
+function StoriesGallery() {
     const [photosData, setPhotosData] = useState([])
-    const category = 'black-and-white'
+    const category = 'stories'
 
     useEffect(() => {
         fetchData()
@@ -44,4 +44,4 @@ function BlackAndWhiteGallery() {
     );
 }
 
-export default BlackAndWhiteGallery;
+export default StoriesGallery;

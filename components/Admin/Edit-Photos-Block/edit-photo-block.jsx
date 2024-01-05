@@ -11,12 +11,15 @@ function EditPhotosBlock() {
     const [minimalisticPhotos, setMinimalisticPhotos] = useState([]);
     const [localArtPhotos, setLocalArtPhotos] = useState([]);
     const [blackAndWhitePhotos, setBlackAndWhitePhotos] = useState([]);
+    const [storiesPhotos, setStoriesPhotos] = useState([]);
+
 
     useEffect(() => {
         getConceptualPhotos();
         getMinimalisticPhotos();
         getLocalArtPhotos();
         getBlackAndWhitePhotos();
+        getStoriesPhotos();
     }, []);
 
     async function getConceptualPhotos() {
@@ -43,6 +46,12 @@ function EditPhotosBlock() {
         setBlackAndWhitePhotos(photosData);
     }
 
+    async function getStoriesPhotos() {
+        const querySnapshot = await getDocs(collection(db, "photos", "gallery", "stories"));
+        const photosData = querySnapshot.docs.map((doc) => ({...doc.data(), uid: doc.id}));
+        setStoriesPhotos(photosData);
+    }
+
     function handleImageCategoryChange(e) {
         setImageCategory(e.target.value);
     }
@@ -61,6 +70,7 @@ function EditPhotosBlock() {
                 <option value="Minimalistic">Minimalistic</option>
                 <option value="Black-And-White">Black-And-White</option>
                 <option value="Local-Art">Local-Art</option>
+                <option value="Stories">Stories</option>
             </select>
 
             {imageCategory === "Conceptual" && (
@@ -85,6 +95,12 @@ function EditPhotosBlock() {
                 <div>
                     <b>{imageCategory} Photos</b>
                     <PhotosTable photos={blackAndWhitePhotos} imageCategory={imageCategory}/>
+                </div>
+            )}
+            {imageCategory === "Stories" && (
+                <div>
+                    <b>{imageCategory} Photos</b>
+                    <PhotosTable photos={storiesPhotos} imageCategory={imageCategory}/>
                 </div>
             )}
         </div>
