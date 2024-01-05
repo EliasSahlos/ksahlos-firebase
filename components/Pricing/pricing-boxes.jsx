@@ -10,7 +10,7 @@ function PricingBoxes() {
                     <hr className="mb-2"/>
                     <li className="mb-4">(50€)</li>
                     <li className="text-white bg-black rounded mx-14 md:mx-24 mb-4">A4</li>
-                    <li className="mb-4 ">HAHNEMUHLE Fine Art Museum Quality Paper</li>
+                    <li className="mb-4 ">HAHNEMUHLE Fine Art 100% Cotton Museum Quality Paper</li>
                     <li className="mb-4">Signed By The Artist</li>
                     <li className="mb-4">Limited To 50 Numbered Copies</li>
                     <li className="mb-4">-</li>
@@ -26,7 +26,7 @@ function PricingBoxes() {
                     <hr className="mb-2"/>
                     <li className="mb-4">(90€)</li>
                     <li className="text-white bg-black rounded mx-14 md:mx-24 mb-4">A3</li>
-                    <li className="mb-4 ">HAHNEMUHLE Fine Art Museum Quality Paper</li>
+                    <li className="mb-4 ">HAHNEMUHLE Fine Art 100% Cotton Museum Quality Paper</li>
                     <li className="mb-4">Signed By The Artist</li>
                     <li className="mb-4">Limited To 30 Numbered Copies</li>
                     <li className="mb-4">-</li>
@@ -42,7 +42,7 @@ function PricingBoxes() {
                     <hr className="mb-2"/>
                     <li className="mb-4">(110€)</li>
                     <li className="text-white bg-black rounded mx-14 md:mx-24 mb-4">A3+</li>
-                    <li className="mb-4 ">HAHNEMUHLE Fine Art Museum Quality Paper</li>
+                    <li className="mb-4 ">HAHNEMUHLE Fine Art 100% Cotton Museum Quality Paper</li>
                     <li className="mb-4">Signed By The Artist</li>
                     <li className="mb-4">Limited To 30 Numbered Copies</li>
                     <li className="mb-4">Certificate Of Authenticity</li>
@@ -58,9 +58,9 @@ function PricingBoxes() {
                     <hr className="mb-2"/>
                     <li className="mb-4">(180€)</li>
                     <li className="text-white bg-black rounded mx-14 md:mx-24 mb-4">A2</li>
-                    <li className="mb-4 ">HAHNEMUHLE Fine Art Museum Quality Paper</li>
+                    <li className="mb-4 ">HAHNEMUHLE Fine Art 100% Cotton Museum Quality Paper</li>
                     <li className="mb-4">Signed By The Artist</li>
-                    <li className="mb-4">Limited To 30 Numbered Copies</li>
+                    <li className="mb-4">Limited To 10 Numbered Copies</li>
                     <li className="mb-4">Certificate Of Authenticity</li>
                     <li className="mb-4">Hologram Verified</li>
                     <li className="mb-4">Printed Using Pigment Inks</li>
@@ -74,7 +74,7 @@ function PricingBoxes() {
                     <hr className="mb-2"/>
                     <li className="mb-4">(Call For Price)</li>
                     <li className="text-white bg-orange-400 rounded md:mx-8 mb-4">Larger Sizes Available</li>
-                    <li className="mb-4 ">HAHNEMUHLE Fine Art Museum Quality Paper</li>
+                    <li className="mb-4 ">HAHNEMUHLE Fine Art 100% Cotton Museum Quality Paper</li>
                     <li className="mb-4">Signed By The Artist</li>
                     <li className="mb-4">-</li>
                     <li className="mb-4">Certificate Of Authenticity</li>
