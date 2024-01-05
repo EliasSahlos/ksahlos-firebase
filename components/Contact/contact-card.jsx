@@ -1,7 +1,7 @@
 function ContactCard() {
     return (
         <div>
-            <h1 className="font-black text-xl">Konstantinos Sahlos</h1>
+            <h1 className=" text-xl">Konstantinos Sahlos</h1>
             <div className="grid grid-cols-2">
                 <div>
                     <p className="text-sm p-1">k.sahlos@gmail.com</p>
