@@ -34,7 +34,7 @@ function AboutPage() {
                     data-aos-delay="400"
                     data-aos-duration="800"
                 >
-                    <div className="leading-6 text-justify">
+                    <div className="leading-6 text-justify 2xl:mr-80">
                         <QuoteBlock/>
                     </div>
                 </div>
