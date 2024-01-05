@@ -31,7 +31,7 @@ function LocalArtGallery() {
                     <meta name="viewport" content="width=device-width, initial-scale=1"/>
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
-                <div className="p-2">
+                <div className="p-2 bg-[#F2F2F2] h-screen">
                     {photosData.length > 0
                         ? <MasonryGrid photos={photosData}/>
                         : <div className='flex justify-center items-center w-full h-screen'>

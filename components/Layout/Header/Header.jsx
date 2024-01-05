@@ -18,7 +18,7 @@ function Header() {
     }
 
     return (
-        <div className="flex justify-between items-center bg-white h-[32px] 2xl:h-[64px] relative">
+        <div className="flex justify-between items-center bg-white h-[44px] 2xl:h-[64px] relative">
             <div className="flex-1">
                 <div
                     className="flex justify-center items-center scale-90 hover:scale-100 ease-in duration-300 cursor-pointer">

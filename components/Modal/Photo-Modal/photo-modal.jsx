@@ -28,7 +28,7 @@ function ModalComponent({itemImg, itemDesc, itemTitle, onModalIsClosed}) {
 
     return (
         <div className='fixed inset-0 z-10' data-aos='zoom-in'>
-            <div className="bg-white flex md:flex-row justify-between items-center p-12 w-full h-screen">
+            <div className="bg-[#F2F2F2] flex md:flex-row justify-between items-center p-12 w-full h-screen">
                 <div className="w-full h-full relative">
                     {isImageLoading &&
                         <div className='flex justify-center items-center w-full h-screen'><Spinner/></div>}
@@ -53,7 +53,7 @@ function ModalComponent({itemImg, itemDesc, itemTitle, onModalIsClosed}) {
                             </motion.div>
                         )}
                     </AnimatePresence>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 md:bottom-2 md:left-5 2xl:left-14 2xl:bottom-5">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 md:bottom-2 md:left-8 2xl:left-14 2xl:bottom-5">
                         <ModalCloseButton onModalCloseHandler={modalCloseHandler}/>
                         <ModalInfoButton onDescriptionButtonClickHandler={descriptionButtonClickHandler}/>
                     </div>

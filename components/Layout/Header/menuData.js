@@ -22,6 +22,10 @@ export const menuData = [
                 title: "Black And White",
                 url: "/fine-art/black-and-white",
             },
+            {
+              title: "Stories",
+              url: "/fine-art/stories"
+            },
         ],
     },
     {
