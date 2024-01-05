@@ -29,8 +29,8 @@ function PricingBoxes() {
                     <li className="mb-4 ">HAHNEMUHLE Fine Art 100% Cotton Museum Quality Paper</li>
                     <li className="mb-4">Signed By The Artist</li>
                     <li className="mb-4">Limited To 30 Numbered Copies</li>
-                    <li className="mb-4">-</li>
-                    <li className="mb-4">-</li>
+                    <li className="mb-4">Certificate Of Authenticity</li>
+                    <li className="mb-4">Hologram Verified</li>
                     <li className="mb-4">Printed Using Pigment Inks</li>
                     <li className="mb-4">(Shipped In Paper Tube)</li>
                 </ul>
