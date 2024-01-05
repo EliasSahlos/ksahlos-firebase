@@ -1,11 +1,11 @@
 'use client'
 import Masonry from '@mui/lab/Masonry';
 import ModalComponent from "@/components/Modal/Photo-Modal/photo-modal";
-import { useEffect, useState } from "react";
-import { useAuth } from "@/utilities/auth-utility";
+import {useEffect, useState} from "react";
+import {useAuth} from "@/utilities/auth-utility";
 import Image from "next/image";
 
-function MasonryGrid({ photos }) {
+function MasonryGrid({photos}) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
     const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 0);
@@ -16,6 +16,7 @@ function MasonryGrid({ photos }) {
         function handleWindowResize() {
             setWindowWidth(window.innerWidth);
         }
+
         window.addEventListener("resize", handleWindowResize);
         return () => {
             window.removeEventListener("resize", handleWindowResize);
@@ -53,7 +54,6 @@ function MasonryGrid({ photos }) {
                         className="block w-full rounded shadow-lg"
                         width={800}
                         height={800}
-                        loading="lazy"
                         quality={80}
                     />
                     <div

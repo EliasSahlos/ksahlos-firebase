@@ -30,13 +30,14 @@ function ModalComponent({itemImg, itemDesc, itemTitle, onModalIsClosed}) {
         <div className='fixed inset-0 z-10' data-aos='zoom-in'>
             <div className="bg-white flex md:flex-row justify-between items-center p-12 w-full h-screen">
                 <div className="w-full h-full relative">
-                    {isImageLoading && <div className='flex justify-center items-center w-full h-screen'><Spinner/></div>}
+                    {isImageLoading &&
+                        <div className='flex justify-center items-center w-full h-screen'><Spinner/></div>}
                     <Image src={itemImg}
                            alt='broken-img'
                            layout='fill'
                            objectFit='contain'
                            objectPosition='center'
-                           loading="lazy"
+                           quality={90}
                            onLoad={handleImageLoad}/>
                     <AnimatePresence>
                         {isDescriptionOpen && (
