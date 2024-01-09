@@ -83,6 +83,7 @@ function PricingBoxes() {
                     <li className="mb-4">(Shipped In Paper Tube)</li>
                 </ul>
             </div>
+            <p className='text-xs mt-6'>Above prices, do not include VAT 24%</p>
         </div>
     );
 }

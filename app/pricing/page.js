@@ -12,7 +12,6 @@ function PricingPage() {
             </Head>
             <div className="w-full h-full bg-[#F2F2F2] flex-col flex justify-around items-center">
                 <PricingBoxes/>
-                <p className='text-xs'>Above prices, do not include VAT 24%</p>
             </div>
 
         </>
