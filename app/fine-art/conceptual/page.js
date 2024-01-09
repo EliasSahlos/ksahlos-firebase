@@ -30,7 +30,10 @@ function ConceptualGallery() {
     const currentPhotos = photosData.slice(indexOfFirstPhoto, indexOfLastPhoto);
 
     // Change page
-    const paginate = pageNumber => setCurrentPage(pageNumber);
+    function paginate(pageNumber){
+        setCurrentPage(pageNumber);
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
 
     return (
         <>
