@@ -35,7 +35,7 @@ function AdminPanelPage() {
                 <meta name="robots" content="noindex" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="flex h-full">
+            <div className="flex h-screen" style={{paddingBottom: '50px'}}>
                 {!user && (
                     <div className="flex flex-col w-full justify-center items-center">
                         <h1>
