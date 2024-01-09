@@ -11,12 +11,8 @@ export const menuData = [
         title: "Fine Art",
         submenu: [
             {
-                title: "Conceptual",
-                url: "/fine-art/conceptual",
-            },
-            {
-                title: "Minimalistic",
-                url: "/fine-art/minimalistic",
+                title: "Illusions",
+                url: "/fine-art/illusions",
             },
             {
                 title: "Black And White",

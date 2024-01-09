@@ -8,7 +8,6 @@ function EditPhotosBlock() {
     const [imageCategory, setImageCategory] = useState("Conceptual");
     //Photo categories
     const [conceptualPhotos, setConceptualPhotos] = useState([]);
-    const [minimalisticPhotos, setMinimalisticPhotos] = useState([]);
     const [localArtPhotos, setLocalArtPhotos] = useState([]);
     const [blackAndWhitePhotos, setBlackAndWhitePhotos] = useState([]);
     const [storiesPhotos, setStoriesPhotos] = useState([]);
@@ -16,7 +15,6 @@ function EditPhotosBlock() {
 
     useEffect(() => {
         getConceptualPhotos();
-        getMinimalisticPhotos();
         getLocalArtPhotos();
         getBlackAndWhitePhotos();
         getStoriesPhotos();
@@ -27,13 +25,6 @@ function EditPhotosBlock() {
         const photosData = querySnapshot.docs.map((doc) => ({...doc.data(), uid: doc.id}));
         const sortedPhotos = photosData.sort((a, b) => a.number - b.number);
         setConceptualPhotos(sortedPhotos);
-    }
-
-    async function getMinimalisticPhotos() {
-        const querySnapshot = await getDocs(collection(db, "photos", "gallery", "minimalistic"));
-        const photosData = querySnapshot.docs.map((doc) => ({...doc.data(), uid: doc.id}));
-        const sortedPhotos = photosData.sort((a, b) => a.number - b.number);
-        setMinimalisticPhotos(sortedPhotos);
     }
 
     async function getLocalArtPhotos() {
@@ -69,25 +60,18 @@ function EditPhotosBlock() {
                 onChange={handleImageCategoryChange}
                 required
             >
-                <option value="Conceptual" defaultChecked defaultValue>
-                    Conceptual
+                <option value="conceptual" defaultChecked defaultValue>
+                    Illusions (Conceptual old)
                 </option>
-                <option value="Minimalistic">Minimalistic</option>
                 <option value="Black-And-White">Black-And-White</option>
                 <option value="Local-Art">Local-Art</option>
                 <option value="Stories">Stories</option>
             </select>
 
-            {imageCategory === "Conceptual" && (
+            {imageCategory === "conceptual" && (
                 <div>
                     <b>{imageCategory} Photos</b>
                     <PhotosTable photos={conceptualPhotos} imageCategory={imageCategory}/>
-                </div>
-            )}
-            {imageCategory === "Minimalistic" && (
-                <div>
-                    <b>{imageCategory} Photos</b>
-                    <PhotosTable photos={minimalisticPhotos} imageCategory={imageCategory}/>
                 </div>
             )}
             {imageCategory === "Local-Art" && (
