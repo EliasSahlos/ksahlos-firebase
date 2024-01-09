@@ -5,16 +5,15 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Image from "next/image";
-import { useState } from "react";
+import {useState} from "react";
 import DeleteModal from "@/components/Modal/Delete-Modal/delete-modal";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { Tooltip } from "@mui/material";
+import {Tooltip} from "@mui/material";
 import InfoAlert from "@/components/Alerts/Info-Alert/info-alert";
 import EditModal from "@/components/Modal/Edit-Modal/edit-modal";
 
-function PhotosTable({ photos, imageCategory }) {
+function PhotosTable({photos, imageCategory}) {
     //Modal Open-Close
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -59,8 +58,8 @@ function PhotosTable({ photos, imageCategory }) {
 
     return (
         <div>
-            {isDocEdited && <InfoAlert message={docEditedMessage} />}
-            {isDocDeleted && <InfoAlert message={docDeletionMessage} />}
+            {isDocEdited && <InfoAlert message={docEditedMessage}/>}
+            {isDocDeleted && <InfoAlert message={docDeletionMessage}/>}
             <TableContainer className="max-h-[500px] overflow-y-scroll">
                 <Table>
                     <TableHead>
@@ -76,7 +75,7 @@ function PhotosTable({ photos, imageCategory }) {
                         {photos.map((photo) => (
                             <TableRow key={photo.uid}>
                                 <TableCell>
-                                    <Image src={photo.url} alt="broken-img" height={40} width={40} />
+                                    <img src={photo.url} alt='broken-img' height={40} width={40}/>
                                 </TableCell>
                                 <TableCell align="center">{photo.title}</TableCell>
                                 <TableCell align="center">{photo.desc.slice(0, 60)}..</TableCell>

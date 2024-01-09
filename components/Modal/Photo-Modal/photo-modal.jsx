@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Spinner from "@/components/Spinner/spinner";
 import {motion, AnimatePresence} from 'framer-motion';
-import {useEffect, useState} from "react";
+import {useEffect, useState, useMemo} from "react";
 import {fadeAnimation} from "@/animations/fade-animation";
 import ModalCloseButton from "@/components/Buttons/Photo-Modal-Buttons/close-button";
 import ModalInfoButton from "@/components/Buttons/Photo-Modal-Buttons/info-button";
@@ -26,19 +25,28 @@ function ModalComponent({itemImg, itemDesc, itemTitle, onModalIsClosed}) {
         setIsDescriptionOpen(!isDescriptionOpen)
     }
 
+    const memoizedImage = useMemo(() => (
+        <img
+            src={itemImg}
+            alt="broken-img"
+            style={{objectFit: 'contain', objectPosition: 'center'}}
+            onLoad={handleImageLoad}
+            className="absolute inset-0 w-full h-full"
+        />
+    ), [itemImg]);
+
     return (
         <div className='fixed inset-0 z-10' data-aos='zoom-in'>
             <div className="bg-[#F2F2F2] flex md:flex-row justify-between items-center p-12 w-full h-screen">
                 <div className="w-full h-full relative">
                     {isImageLoading &&
-                        <div className='flex justify-center items-center w-full h-screen'><Spinner/></div>}
-                    <Image src={itemImg}
-                           alt='broken-img'
-                           layout='fill'
-                           objectFit='contain'
-                           objectPosition='center'
-                           quality={90}
-                           onLoad={handleImageLoad}/>
+                        <div className='flex justify-center items-center w-full h-screen'>
+                            <Spinner/>
+                        </div>
+                    }
+                    <div className={!isImageLoading ? "w-full h-full" : "hidden"}>
+                        {memoizedImage}
+                    </div>
                     <AnimatePresence>
                         {isDescriptionOpen && (
                             <motion.div
@@ -53,7 +61,8 @@ function ModalComponent({itemImg, itemDesc, itemTitle, onModalIsClosed}) {
                             </motion.div>
                         )}
                     </AnimatePresence>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 md:bottom-2 md:left-8 2xl:left-14 2xl:bottom-5">
+                    <div
+                        className="absolute left-1/2 transform -translate-x-1/2 md:bottom-2 md:left-8 2xl:left-14 2xl:bottom-5">
                         <ModalCloseButton onModalCloseHandler={modalCloseHandler}/>
                         <ModalInfoButton onDescriptionButtonClickHandler={descriptionButtonClickHandler}/>
                     </div>

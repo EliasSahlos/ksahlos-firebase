@@ -45,7 +45,7 @@ function MasonryGrid({photos}) {
     }
 
     return (
-        <div style={{ paddingBottom: '50px'}}>
+        <div style={{paddingBottom: '50px'}}>
             <Masonry columns={columnPickerHandler()} spacing={1}>
                 {photos?.map((item, index) => (
                     <div key={index} className="relative group">

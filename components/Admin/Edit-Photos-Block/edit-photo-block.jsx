@@ -25,31 +25,36 @@ function EditPhotosBlock() {
     async function getConceptualPhotos() {
         const querySnapshot = await getDocs(collection(db, "photos", "gallery", "conceptual"));
         const photosData = querySnapshot.docs.map((doc) => ({...doc.data(), uid: doc.id}));
-        setConceptualPhotos(photosData);
+        const sortedPhotos = photosData.sort((a, b) => a.number - b.number);
+        setConceptualPhotos(sortedPhotos);
     }
 
     async function getMinimalisticPhotos() {
         const querySnapshot = await getDocs(collection(db, "photos", "gallery", "minimalistic"));
         const photosData = querySnapshot.docs.map((doc) => ({...doc.data(), uid: doc.id}));
-        setMinimalisticPhotos(photosData);
+        const sortedPhotos = photosData.sort((a, b) => a.number - b.number);
+        setMinimalisticPhotos(sortedPhotos);
     }
 
     async function getLocalArtPhotos() {
         const querySnapshot = await getDocs(collection(db, "photos", "gallery", "local-art"));
         const photosData = querySnapshot.docs.map((doc) => ({...doc.data(), uid: doc.id}));
-        setLocalArtPhotos(photosData);
+        const sortedPhotos = photosData.sort((a, b) => a.number - b.number);
+        setLocalArtPhotos(sortedPhotos);
     }
 
     async function getBlackAndWhitePhotos() {
         const querySnapshot = await getDocs(collection(db, "photos", "gallery", "black-and-white"));
         const photosData = querySnapshot.docs.map((doc) => ({...doc.data(), uid: doc.id}));
-        setBlackAndWhitePhotos(photosData);
+        const sortedPhotos = photosData.sort((a, b) => a.number - b.number);
+        setBlackAndWhitePhotos(sortedPhotos);
     }
 
     async function getStoriesPhotos() {
         const querySnapshot = await getDocs(collection(db, "photos", "gallery", "stories"));
         const photosData = querySnapshot.docs.map((doc) => ({...doc.data(), uid: doc.id}));
-        setStoriesPhotos(photosData);
+        const sortedPhotos = photosData.sort((a, b) => a.number - b.number);
+        setStoriesPhotos(sortedPhotos);
     }
 
     function handleImageCategoryChange(e) {
