@@ -44,7 +44,7 @@ function StoriesGallery() {
                     <meta name="viewport" content="width=device-width, initial-scale=1"/>
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
-                <div className="p-2 bg-[#F2F2F2] h-screen">
+                <div className="p-2">
                     {photosData.length > 0
                         ? <>
                             <MasonryGrid photos={currentPhotos}/>
