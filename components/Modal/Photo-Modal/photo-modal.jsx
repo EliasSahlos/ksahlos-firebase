@@ -62,7 +62,7 @@ function ModalComponent({itemImg, itemDesc, itemTitle, onModalIsClosed}) {
                         )}
                     </AnimatePresence>
                     <div
-                        className="absolute left-1/2 transform -translate-x-1/2 md:bottom-2 md:left-8 2xl:left-14 2xl:bottom-5">
+                        className="absolute left-1/2 transform -translate-x-1/2 bottom-2 md:left-8 2xl:left-14 2xl:bottom-5">
                         <ModalCloseButton onModalCloseHandler={modalCloseHandler}/>
                         <ModalInfoButton onDescriptionButtonClickHandler={descriptionButtonClickHandler}/>
                     </div>
