@@ -21,7 +21,7 @@ The admin panel allows authorized users to perform CRUD operations on the databa
 - Firebase (Firestore, Authentication Storage)
 
 ## Installation ⚙️
-1. Clone the repository: ``git clone https://github.com/your-username/ksahlos-firebase.git``
+1. Clone the repository: ``git clone https://github.com/EliasSahlos/ksahlos-firebase.git``
 2. Navigate into the project directory: ``cd ksahlos-firebase ``
 3. Install dependencies: ``npm install``
 4. Set up Firebase:
