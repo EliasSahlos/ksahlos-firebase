@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ksahlos-firebase 📸
 
-## Getting Started
+This is a photography portfolio website created for showcasing the work of a photographer. The project utilizes Next.js for the frontend and Firebase services (Firestore database and Storage) for backend functionalities.
 
-First, run the development server:
+You can view a live demo of the website deployed on Vercel by following this link: [Live Demo](https://ksahlosapp.vercel.app/)
+## Features 🚀
+- View photos categorized by different categories.
+- Navigate through various pages including about, contact, and prices.
+- Backend powered by Firebase for efficient data storage and management.
+- Admin panel for performing CRUD (Create, Read, Update, Delete) operations on the database.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Admin Panel 🔧
+The admin panel allows authorized users to perform CRUD operations on the database. Key functionalities include:
+- **Create**: Add new photos or categories to the portfolio.
+- **Read**: View existing photos and categories.
+- **Update**: Edit information about photos or categories.
+- **Delete**: Remove photos or categories from the portfolio.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used 💻
+- Next.js
+- Firebase (Firestore, Authentication Storage)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Installation ⚙️
+1. Clone the repository: ``git clone https://github.com/your-username/ksahlos-firebase.git``
+2. Navigate into the project directory: ``cd ksahlos-firebase ``
+3. Install dependencies: ``npm install``
+4. Set up Firebase:
+- Create a Firebase project on the [Firebase Console](https://console.firebase.google.com/).
+- Set up Firestore database and Storage.
+- Copy your Firebase configuration settings.
+- Create a `.env` file in the root directory and add your Firebase configuration:
+  ```
+  NEXT_PUBLIC_API_KEY=<your-api-key>
+  NEXT_PUBLIC_AUTH_DOMAIN=<your-auth-domain>
+  NEXT_PUBLIC_PROJECT_ID=<your-project-id>
+  NEXT_PUBLIC_STORAGE_BUCKET=<your-storage-bucket>
+  NEXT_PUBLIC_MESSAGING_SENDER_ID=<your-sender-id>
+  NEXT_PUBLIC_APP_ID=<your-app-id>
+  ```
+## Usage 🚀
+- Start the development server: ``npm run dev``
+- Open your browser and navigate to `http://localhost:3000` to view the website.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author ✍️
+- Elias Sahlos
+- [Find me on Github](https://github.com/EliasSahlos/)
