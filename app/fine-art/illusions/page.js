@@ -8,8 +8,13 @@ import Spinner from "@/components/Spinner/spinner";
 function IllusionsGallery() {
     const [photosData, setPhotosData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const photosPerPage = 15;
+    
     const category = 'conceptual';
+    
+    const photosPerPage = 15;
+    const indexOfLastPhoto = currentPage * photosPerPage;
+    const indexOfFirstPhoto = indexOfLastPhoto - photosPerPage;
+    const currentPhotos = photosData.slice(indexOfFirstPhoto, indexOfLastPhoto);
 
     useEffect(() => {
         fetchData();
@@ -17,19 +22,20 @@ function IllusionsGallery() {
 
     async function fetchData() {
         try {
-            const data = await getPhotos(category);
-            setPhotosData(data);
+            const storedData = localStorage.getItem('illusionStoredPhotos')
+            if (storedData) {
+                const retrievedArray = JSON.parse(storedData)
+                setPhotosData(retrievedArray)
+            } else {
+                const data = await getPhotos(category);
+                setPhotosData(data);
+                localStorage.setItem('illusionStoredPhotos',JSON.stringify(data))
+            }
         } catch (error) {
             console.error("Error fetching data:", error);
         }
     }
 
-    // Get current photos
-    const indexOfLastPhoto = currentPage * photosPerPage;
-    const indexOfFirstPhoto = indexOfLastPhoto - photosPerPage;
-    const currentPhotos = photosData.slice(indexOfFirstPhoto, indexOfLastPhoto);
-
-    // Change page
     function paginate(pageNumber){
         setCurrentPage(pageNumber);
         window.scrollTo({top: 0, behavior: 'smooth'});
