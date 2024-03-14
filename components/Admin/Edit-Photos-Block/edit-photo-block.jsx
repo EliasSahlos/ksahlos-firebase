@@ -5,7 +5,7 @@ import {getDocs, collection} from "firebase/firestore";
 import {db} from "@/firebase/firebase";
 
 function EditPhotosBlock() {
-    const [imageCategory, setImageCategory] = useState("Conceptual");
+    const [imageCategory, setImageCategory] = useState("conceptual");
     //Photo categories
     const [conceptualPhotos, setConceptualPhotos] = useState([]);
     const [localArtPhotos, setLocalArtPhotos] = useState([]);
@@ -41,7 +41,6 @@ function EditPhotosBlock() {
         const sortedPhotos = photosData.sort((a, b) => a.number - b.number);
         setBlackAndWhitePhotos(sortedPhotos);
     }
-
 
     //Warning: Dramatic indexes to stories collection in database
     async function getDramaticPhotos() {

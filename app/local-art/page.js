@@ -8,9 +8,9 @@ import Spinner from "@/components/Spinner/spinner";
 function LocalArtGallery() {
     const [photosData, setPhotosData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    
+
     const category = 'local-art';
-    
+
     const photosPerPage = 15;
     const indexOfLastPhoto = currentPage * photosPerPage;
     const indexOfFirstPhoto = indexOfLastPhoto - photosPerPage;
@@ -44,8 +44,8 @@ function LocalArtGallery() {
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
                 <div className="p-2">
-                    {photosData.length > 0
-                        ? <>
+                    {photosData.length > 0 ?
+                        <>
                             <MasonryGrid photos={currentPhotos}/>
                             <div className="flex justify-center items-center">
                                 {/* Pagination Controls */}

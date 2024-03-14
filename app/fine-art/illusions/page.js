@@ -8,9 +8,9 @@ import Spinner from "@/components/Spinner/spinner";
 function IllusionsGallery() {
     const [photosData, setPhotosData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    
+
     const category = 'conceptual';
-    
+
     const photosPerPage = 15;
     const indexOfLastPhoto = currentPage * photosPerPage;
     const indexOfFirstPhoto = indexOfLastPhoto - photosPerPage;
@@ -29,7 +29,7 @@ function IllusionsGallery() {
         }
     }
 
-    function paginate(pageNumber){
+    function paginate(pageNumber) {
         setCurrentPage(pageNumber);
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
@@ -44,8 +44,8 @@ function IllusionsGallery() {
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
                 <div className="p-2">
-                    {photosData.length > 0
-                        ? <>
+                    {photosData.length > 0 ?
+                        <>
                             <MasonryGrid photos={currentPhotos}/>
                             <div className="flex justify-center items-center">
                                 {/* Pagination Controls */}

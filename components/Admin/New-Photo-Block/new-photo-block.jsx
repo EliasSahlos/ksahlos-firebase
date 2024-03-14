@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { addDoc, collection } from "firebase/firestore";
-import { db } from "@/firebase/firebase";
+import {useEffect, useState} from "react";
+import {getStorage, ref, uploadBytes, getDownloadURL} from "firebase/storage";
+import {addDoc, collection} from "firebase/firestore";
+import {db} from "@/firebase/firebase";
 import Spinner from "../../Spinner/spinner";
 import InfoAlert from "../../Alerts/Info-Alert/info-alert";
+import {log} from "next/dist/server/typescript/utils";
 
 function NewPhotoBlock() {
     const [imageTitle, setImageTitle] = useState("");
@@ -17,10 +18,6 @@ function NewPhotoBlock() {
     const [errorAlert, setErrorAlert] = useState(false);
 
     const storage = getStorage();
-
-    useEffect(() => {
-        console.log("category when renders", imageCategory);
-    })
 
     function handleImageUploadChange(e) {
         const selectedImage = e.target.files[0];
@@ -37,7 +34,6 @@ function NewPhotoBlock() {
 
     function handleImageCategoryChange(e) {
         setImageCategory(e.target.value);
-        console.log("CATEGORY", imageCategory)
     }
 
     function handleImageNumberChange(e) {
@@ -85,12 +81,12 @@ function NewPhotoBlock() {
         <div className="flex flex-col">
             {isUploading && (
                 <div className="my-4">
-                    <Spinner />
+                    <Spinner/>
                 </div>
             )}
             {!isUploading && uploadFinishedAlert && (
                 <div className="my-4">
-                    <InfoAlert message={"Image was added successfully!"} />
+                    <InfoAlert message={"Image was added successfully!"}/>
                 </div>
             )}
             {!isUploading && errorAlert && (
@@ -113,9 +109,9 @@ function NewPhotoBlock() {
                 <option value="conceptual" defaultChecked defaultValue>
                     Illusions (Old Conceptual)
                 </option>
-                <option value="Black-And-White">Black-And-White</option>
+                <option value="black-and-white">Black-And-White</option>
                 <option value="Stories">Dramatic (Old Stories)</option>
-                <option value="Local-Art">Local-Art</option>
+                <option value="local-art">Local-Art</option>
             </select>
             <p className="text-sm">Image Number</p>
             <input
@@ -132,7 +128,7 @@ function NewPhotoBlock() {
                 onChange={handleImageDescriptionChange}
                 required
             />
-            <input className="my-6" type="file" onChange={handleImageUploadChange} required />
+            <input className="my-6" type="file" onChange={handleImageUploadChange} required/>
             <button className="bg-black text-white rounded shadow-md p-2 mx-14" onClick={handleSubmit}>
                 Submit Photo
             </button>
