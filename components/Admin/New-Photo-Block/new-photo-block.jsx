@@ -74,7 +74,7 @@ function NewPhotoBlock() {
         setImageTitle("");
         setImageDescription("");
         setImageCategory("");
-        setImageNumber(null);
+        setImageNumber(imageNumber);
     }
 
     return (
