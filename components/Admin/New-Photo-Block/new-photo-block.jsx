@@ -8,7 +8,7 @@ import InfoAlert from "../../Alerts/Info-Alert/info-alert";
 function NewPhotoBlock() {
     const [imageTitle, setImageTitle] = useState("");
     const [imageDescription, setImageDescription] = useState("");
-    const [imageCategory, setImageCategory] = useState("Illusions");
+    const [imageCategory, setImageCategory] = useState("conceptual");
     const [image, setImage] = useState(null);
     const [imageNumber, setImageNumber] = useState(0);
 
@@ -110,7 +110,7 @@ function NewPhotoBlock() {
             <p className="text-sm">Select A Category</p>
             <select className="mb-5 border-2 rounded shadow-md p-2" value={imageCategory}
                     onChange={handleImageCategoryChange} required>
-                <option value="Illusions" defaultChecked defaultValue>
+                <option value="conceptual" defaultChecked defaultValue>
                     Illusions (Old Conceptual)
                 </option>
                 <option value="Black-And-White">Black-And-White</option>
