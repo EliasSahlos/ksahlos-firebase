@@ -22,15 +22,8 @@ function IllusionsGallery() {
 
     async function fetchData() {
         try {
-            const storedData = localStorage.getItem('illusionStoredPhotos')
-            if (storedData) {
-                const retrievedArray = JSON.parse(storedData)
-                setPhotosData(retrievedArray)
-            } else {
-                const data = await getPhotos(category);
-                setPhotosData(data);
-                localStorage.setItem('illusionStoredPhotos',JSON.stringify(data))
-            }
+            const data = await getPhotos(category);
+            setPhotosData(data);
         } catch (error) {
             console.error("Error fetching data:", error);
         }

@@ -25,7 +25,6 @@ function AdminPanelPage() {
         setIsEditPhotosBlockVisible(true);
     }
 
-    console.log(user);
     return (
         <>
             <Head>

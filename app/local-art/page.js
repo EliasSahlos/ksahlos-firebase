@@ -22,15 +22,8 @@ function LocalArtGallery() {
 
     async function fetchData() {
         try {
-            const storedData = localStorage.getItem('localartStoredPhotos')
-            if (storedData) {
-                const retrievedArray = JSON.parse(storedData)
-                setPhotosData(retrievedArray)
-            } else {
-                const data = await getPhotos(category);
-                setPhotosData(data);
-                localStorage.setItem('localartStoredPhotos',JSON.stringify(data))
-            }
+            const data = await getPhotos(category);
+            setPhotosData(data);
         } catch (error) {
             console.error("Error fetching data:", error);
         }

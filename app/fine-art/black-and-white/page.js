@@ -22,15 +22,8 @@ function BlackAndWhiteGallery() {
 
     async function fetchData() {
         try {
-            const storedData = localStorage.getItem('bnwStoredPhotos')
-            if (storedData) {
-                const retrievedArray = JSON.parse(storedData)
-                setPhotosData(retrievedArray)
-            } else {
-                const data = await getPhotos(category);
-                setPhotosData(data);
-                localStorage.setItem('bnwStoredPhotos', JSON.stringify(data))
-            }
+            const data = await getPhotos(category);
+            setPhotosData(data);
         } catch (error) {
             console.error("Error fetching data:", error);
         }

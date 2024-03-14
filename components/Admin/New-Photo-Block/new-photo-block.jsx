@@ -111,10 +111,10 @@ function NewPhotoBlock() {
             <select className="mb-5 border-2 rounded shadow-md p-2" value={imageCategory}
                     onChange={handleImageCategoryChange} required>
                 <option value="Illusions" defaultChecked defaultValue>
-                    Illusions
+                    Illusions (Old Conceptual)
                 </option>
                 <option value="Black-And-White">Black-And-White</option>
-                <option value="Stories">Stories</option>
+                <option value="Stories">Dramatic (Old Stories)</option>
                 <option value="Local-Art">Local-Art</option>
             </select>
             <p className="text-sm">Image Number</p>

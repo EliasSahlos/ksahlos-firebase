@@ -10,17 +10,18 @@ function EditPhotosBlock() {
     const [conceptualPhotos, setConceptualPhotos] = useState([]);
     const [localArtPhotos, setLocalArtPhotos] = useState([]);
     const [blackAndWhitePhotos, setBlackAndWhitePhotos] = useState([]);
-    const [storiesPhotos, setStoriesPhotos] = useState([]);
+    const [dramaticPhotos, setDramaticPhotos] = useState([]);
 
 
     useEffect(() => {
-        getConceptualPhotos();
+        getIllusionPhotos();
         getLocalArtPhotos();
         getBlackAndWhitePhotos();
-        getStoriesPhotos();
+        getDramaticPhotos();
     }, []);
 
-    async function getConceptualPhotos() {
+    //Warning: Illusion indexes to conceptual in database
+    async function getIllusionPhotos() {
         const querySnapshot = await getDocs(collection(db, "photos", "gallery", "conceptual"));
         const photosData = querySnapshot.docs.map((doc) => ({...doc.data(), uid: doc.id}));
         const sortedPhotos = photosData.sort((a, b) => a.number - b.number);
@@ -41,11 +42,13 @@ function EditPhotosBlock() {
         setBlackAndWhitePhotos(sortedPhotos);
     }
 
-    async function getStoriesPhotos() {
+
+    //Warning: Dramatic indexes to stories collection in database
+    async function getDramaticPhotos() {
         const querySnapshot = await getDocs(collection(db, "photos", "gallery", "stories"));
         const photosData = querySnapshot.docs.map((doc) => ({...doc.data(), uid: doc.id}));
         const sortedPhotos = photosData.sort((a, b) => a.number - b.number);
-        setStoriesPhotos(sortedPhotos);
+        setDramaticPhotos(sortedPhotos);
     }
 
     function handleImageCategoryChange(e) {
@@ -65,7 +68,7 @@ function EditPhotosBlock() {
                 </option>
                 <option value="Black-And-White">Black-And-White</option>
                 <option value="Local-Art">Local-Art</option>
-                <option value="Stories">Stories</option>
+                <option value="Stories">Dramatic (Stories old)</option>
             </select>
 
             {imageCategory === "conceptual" && (
@@ -89,7 +92,7 @@ function EditPhotosBlock() {
             {imageCategory === "Stories" && (
                 <div>
                     <b>{imageCategory} Photos</b>
-                    <PhotosTable photos={storiesPhotos} imageCategory={imageCategory}/>
+                    <PhotosTable photos={dramaticPhotos} imageCategory={imageCategory}/>
                 </div>
             )}
         </div>
