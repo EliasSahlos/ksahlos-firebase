@@ -24,10 +24,10 @@ export const menuData = [
             },
         ],
     },
-    {
-        title: "Local Art",
-        url: "/local-art",
-    },
+    // {
+    //     title: "Local Art",
+    //     url: "/local-art",
+    // },
     {
         title: "Pricing",
         url: "/pricing",
