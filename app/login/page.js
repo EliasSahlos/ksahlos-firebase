@@ -14,12 +14,12 @@ function LoginPage() {
     useEffect(() => {
         if (user) {
             setIsUserLoggedIn(true);
-            router.push("/admin"); //TODO:CHANGE
+            router.push("/admin");
         } else {
             setIsUserLoggedIn(false);
             setCheckingUserState(false);
         }
-    }, []);
+    }, [user]);
     console.log(user);
     return (
         <>

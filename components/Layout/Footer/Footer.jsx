@@ -1,16 +1,16 @@
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import Link from "next/link";
+import FacebookIcon from "@mui/icons-material/Facebook"
+import InstagramIcon from "@mui/icons-material/Instagram"
+import Link from "next/link"
 
 function getCurrentYear() {
-    const currentDate = new Date();
-    return currentDate.getFullYear();
+    const currentDate = new Date()
+    return currentDate.getFullYear()
 }
 
 function Footer() {
     return (
         <div className="flex justify-center items-center bg-white h-[44px] 2xl:h-[64px] font-light">
-            <div className="flex items-center absolute left-0">
+            <div className="flex items-center absolute left-0 lg:left-9 2xl:left-12">
                 <Link
                     className="hover:text-blue-500 hover:scale-125 ease-in duration-300 cursor-pointer"
                     target="_blank"
@@ -30,7 +30,7 @@ function Footer() {
                 <h1 className="md:text-[10px] text-[9px]">© {getCurrentYear()} Konstantinos Sahlos. All Rights Reserved</h1>
             </div>
         </div>
-    );
+    )
 }
 
-export default Footer;
+export default Footer

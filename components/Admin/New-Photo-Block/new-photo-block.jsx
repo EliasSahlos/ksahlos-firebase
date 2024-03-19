@@ -9,7 +9,7 @@ import {log} from "next/dist/server/typescript/utils";
 function NewPhotoBlock() {
     const [imageTitle, setImageTitle] = useState("");
     const [imageDescription, setImageDescription] = useState("");
-    const [imageCategory, setImageCategory] = useState("conceptual");
+    const [imageCategory, setImageCategory] = useState("Conceptual");
     const [image, setImage] = useState(null);
     const [imageNumber, setImageNumber] = useState(0);
 
@@ -73,7 +73,7 @@ function NewPhotoBlock() {
     function clearInputs() {
         setImageTitle("");
         setImageDescription("");
-        setImageCategory("");
+        setImageCategory("Conceptual");
         setImageNumber(imageNumber);
     }
 
@@ -106,12 +106,12 @@ function NewPhotoBlock() {
             <p className="text-sm">Select A Category</p>
             <select className="mb-5 border-2 rounded shadow-md p-2" value={imageCategory}
                     onChange={handleImageCategoryChange} required>
-                <option value="conceptual" defaultChecked defaultValue>
+                <option value="Conceptual" defaultChecked defaultValue>
                     Illusions (Old Conceptual)
                 </option>
-                <option value="black-and-white">Black-And-White</option>
+                <option value="Black-And-White">Black-And-White</option>
                 <option value="Stories">Dramatic (Old Stories)</option>
-                <option value="local-art">Local-Art</option>
+                <option value="Local-art">Local-Art</option>
             </select>
             <p className="text-sm">Image Number</p>
             <input

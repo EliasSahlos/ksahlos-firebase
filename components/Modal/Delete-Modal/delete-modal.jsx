@@ -1,40 +1,50 @@
-import Modal from "@mui/material/Modal";
-import {deleteDoc, doc} from "firebase/firestore";
-import {db} from "../../../firebase/firebase"
-
+import Modal from "@mui/material/Modal"
+import { deleteDoc, doc } from "firebase/firestore"
+import { db } from "../../../firebase/firebase"
+import { getStorage, ref, deleteObject } from "firebase/storage" // Import ref and deleteObject
 
 function DeleteModal({
-                         isDeleteModalOpen,
-                         onHandleDeleteModalClose,
-                         onDocDeletionComplete,
-                         imageCategory,
-                         selectedUID,
-                         selectedTitle,
-                     }) {
+    isDeleteModalOpen,
+    onHandleDeleteModalClose,
+    onDocDeletionComplete,
+    imageCategory,
+    selectedUID,
+    selectedTitle,
+}) {
 
     async function handleDeleteClick() {
-        const category = imageCategory.toLowerCase();
+        const category = imageCategory.toLowerCase()
         try {
+            // Initialize Firebase storage
+            const storage = getStorage()
+
+            // Create a reference to the photo in Firebase storage
+            const photoRef = ref(storage, `${category}/${selectedTitle}`)
+
+            // Delete the photo from Firebase storage
+            await deleteObject(photoRef)
+
+            // Once the photo is deleted from storage, proceed to delete it from the database
             const message = `Entry ${selectedTitle} deleted successfully! Reload to see changes`
-            await deleteDoc(doc(db, "photos", "gallery", category, selectedUID));
+            await deleteDoc(doc(db, "photos", "gallery", category, selectedUID))
             deletionCompleted(message)
         } catch (error) {
-            console.error(error);
-            const errorMessage = "An error occurred while deleting the entry.";
-            deletionCompleted(errorMessage);
+            console.error(error)
+            const errorMessage = "An error occurred while deleting the entry."
+            deletionCompleted(errorMessage)
         }
     }
 
 
     function handleDeleteModalClose() {
-        onHandleDeleteModalClose();
+        onHandleDeleteModalClose()
     }
 
     function deletionCompleted(message) {
         onDocDeletionComplete(message)
     }
 
-    console.log("ISMODALOPEN", isDeleteModalOpen);
+    console.log("ISMODALOPEN", isDeleteModalOpen)
     return (
         <div>
             <Modal
@@ -47,7 +57,7 @@ function DeleteModal({
                     <div className="bg-white rounded shadow-md p-4">
                         <div>
                             <h1 className="text-xl font-semibold text-red-500">Warning</h1>
-                            <hr className="my-2"/>
+                            <hr className="my-2" />
                             Are you sure you want to delete this entry from the Database ?
                         </div>
                         <div className="flex justify-end items-center mt-8">
@@ -65,7 +75,7 @@ function DeleteModal({
                 </div>
             </Modal>
         </div>
-    );
+    )
 }
 
-export default DeleteModal;
+export default DeleteModal
