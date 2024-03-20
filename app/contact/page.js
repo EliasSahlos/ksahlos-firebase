@@ -56,7 +56,7 @@ function ContactPage() {
                         <div className='my-3'>
                             <Link href='https://www.instagram.com/ksahlos_photo/'>
                                 <InstagramIcon />
-                                <span className='mx-2'>Ksahlos Photo</span>
+                                <span className='mx-2'>Ksahlos_Photo</span>
                             </Link>
                         </div>
                     </div>
